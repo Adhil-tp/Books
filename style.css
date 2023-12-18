@@ -1,0 +1,167 @@
+:root {
+    --white: #fffbfb;
+    --grey: #f0eef1;
+    --black: #050505;
+    --red: #ff7070;
+    --light-green: #9fff9c;
+    --light-red: #ff9c9c;
+}
+body{
+    background-color: var(--grey);
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: var(--grey);
+    height: 100%;
+    z-index:1;
+}
+.add-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+.addBook{
+    background-color: var(--grey);
+    border: none;
+    height: 40px;
+    width: 100px;
+    font-size: larger
+}
+.books{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(300px,1fr ));
+    height:100%;
+    width: 80%;
+    align-items: center;
+    gap: 80px;
+    padding: 20px;
+    z-index: 2;
+}
+.card{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    gap: 30px;
+    z-index: 3;
+    padding: 20px;
+    height: 300px;
+    border-radius: 10px;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0px 0px 30px 0px rgb(220, 219, 219);
+    font-size: medium;
+}.card h2{
+    margin: 0;
+}
+.read-not-read{
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: var(--light-green);
+    border: none;
+}
+.delete-button{
+    width: 90%;
+    height: 40px;
+    background-color: var(--grey);
+    border-radius: 10px;
+    border: none;
+}
+.header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;  
+    background-color: var(--white);
+}
+.header button{
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--grey);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+/* popup screen css */
+
+
+.book-form{
+    width: 500px;
+}
+.pop-up-screen{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(119, 119, 119, 0.568);
+    z-index: 4;
+}
+.read-or-not{
+    display: flex;
+}
+
+.title, .author, .pages{
+    width: 80%;
+    height: 40px ;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--white);
+    align-items: center;
+    padding-left: 20px;
+}
+.details input::placeholder{
+    color: rgb(171, 170, 170);
+    text-align: start;
+    font-size: larger;
+}
+.details{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    gap: 30px;
+    padding: 40px;
+    background-color: var(--grey);
+    z-index: 5;
+}
+.details button{
+    border-radius: 10px;
+    height: 40px;
+    width: 100%;
+    border: none;
+    background-color: var(--light-green);
+}
+.read-or-not{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.read{
+    background-color: var(--light-green);
+}
+.not-read{
+    background-color:var(--red);
+}
